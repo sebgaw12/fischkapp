@@ -1,10 +1,15 @@
 import React from "react";
-import { Layout } from "./AppLayout.style";
+import {Layout} from "./AppLayout.style";
 
-export const AppLayout = (props: any): React.JSX.Element => {
- return  (
-  <>
-    <Layout>{props.children}</Layout>
-  </>
-);
+interface AppLayoutProps {
+    children: React.ReactNode;
+}
+
+export const AppLayout: React.FC<AppLayoutProps> = ({children}) => {
+
+    return (
+        <>
+            <Layout>{children}</Layout>
+        </>
+    );
 }
